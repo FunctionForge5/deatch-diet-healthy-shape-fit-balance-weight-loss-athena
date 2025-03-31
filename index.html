@@ -414,8 +414,34 @@ Während Sie schlafen, verbrennt Ihr Körper alle tagsüber aufgenommenen Kalori
 				</div>
 				<div class="elementor-element elementor-element-8e1ff98 elementor-widget elementor-widget-html" data-id="8e1ff98" data-element_type="widget" data-widget_type="html.default">
 				<div class="elementor-widget-container">
-					<p id="clock" style="font-size:30px;text-align:center;font-family:Montserrat ;margin-top:0%;0%;margin-right:0%;margin-bottom:0%;color:red;" <="" p="">1 Februar 2025				</p></div>
+					<p id="clock" style="font-size:30px;text-align:center;font-family:Montserrat ;margin-top:0%;0%;margin-right:0%;margin-bottom:0%;color:red;"> <span id="formattedDate"></span>				</p></div>
 				</div>
+						
+		<script>
+        // Create a new Date object for the current date
+        const currentDate = new Date();
+
+        // Add 1 day to the current date
+        currentDate.setDate(currentDate.getDate() + 1);
+
+        // Array of month names in German
+        const months = [
+            "Januar", "Februar", "März", "April", "Mai", "Juni",
+            "Juli", "August", "September", "Oktober", "November", "Dezember"
+        ];
+
+        // Get the day, month, and year
+        const day = currentDate.getDate();
+        const month = months[currentDate.getMonth()];
+        const year = currentDate.getFullYear();
+
+        // Format the date as "1 Februar 2025"
+        const formattedDate = `${day} ${month} ${year}`;
+
+        // Display the formatted date in the HTML element with id "formattedDate"
+        document.getElementById("formattedDate").textContent = formattedDate;
+    </script>
+						
 				<div class="elementor-element elementor-element-cf0cebc elementor-align-center elementor-widget elementor-widget-button" data-id="cf0cebc" data-element_type="widget" data-widget_type="button.default">
 				<div class="elementor-widget-container">
 									<div class="elementor-button-wrapper">
